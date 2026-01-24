@@ -296,7 +296,7 @@ namespace ROLib
             Fields[nameof(panelLength)].uiControlEditor.onFieldChanged =
             Fields[nameof(panelLength)].uiControlEditor.onSymmetryFieldChanged = (a, b) =>
             {
-                if ((float) a.GetValue(this) != prevLength)
+                if (panelLength != prevLength)
                 {
                     ModelChangedHandler(true);
                     prevLength = panelLength;
@@ -306,7 +306,7 @@ namespace ROLib
             Fields[nameof(panelWidth)].uiControlEditor.onFieldChanged =
             Fields[nameof(panelWidth)].uiControlEditor.onSymmetryFieldChanged = (a, b) =>
             {
-                if ((float) a.GetValue(this) != prevWidth)
+                if (panelWidth != prevWidth)
                 {
                     ModelChangedHandler(true);
                     prevWidth = panelWidth;
@@ -316,7 +316,7 @@ namespace ROLib
             Fields[nameof(panelScale)].uiControlEditor.onFieldChanged =
             Fields[nameof(panelScale)].uiControlEditor.onSymmetryFieldChanged = (a, b) =>
             {
-                if ((float)a.GetValue(this) != prevScale)
+                if (panelScale != prevScale)
                 {
                     ModelChangedHandler(true);
                     prevScale = panelScale;

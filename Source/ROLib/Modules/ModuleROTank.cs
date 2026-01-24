@@ -639,8 +639,7 @@ namespace ROLib
 
         private void OnDiameterChanged(BaseField f, object o)
         {
-            // KSP 1.7.3 bug, symmetry invocations will have o=newValue instead of previousValue
-            if ((float)f.GetValue(this) == prevDiameter) return;
+            if (currentDiameter == prevDiameter) return;
             if (lengthWidth)
             {
                 ValidateLength();
@@ -651,7 +650,7 @@ namespace ROLib
 
         private void OnLengthChanged(BaseField f, object o)
         {
-            if ((float)f.GetValue(this) == prevLength) return;
+            if (currentLength == prevLength) return;
             ValidateLength();
             SetModelFromDimensions();
             ModelChangedHandler(true);
