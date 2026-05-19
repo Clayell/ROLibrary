@@ -144,7 +144,7 @@ namespace ROLib
 
             if (HighLogic.LoadedSceneIsFlight)
             {
-                shader = Shader.Find("KSP/Bumped Specular Opaque (Cutoff)");
+                shader = Shader.Find("KSP/Bumped Specular Opaque (Cutoff)"); // https://github.com/LGhassen/Deferred/blob/ef3c211b5cf447beb15732a47bd5c25669f96a4c/shaders/DeferredKSPShaders/Assets/Shaders/Replaced%20shaders/Part%20shaders/BumpedSpecularCutoff.shader
                 if (shader == null)
                 {
                     ROLLog.error($"No shader called KSP/Bumped Specular Opaque (Cutoff) found for part {base.part.partInfo.name}.");
@@ -153,7 +153,7 @@ namespace ROLib
             }
             else
             {
-                shader = Shader.Find("KSP/Bumped Specular (Cutoff)");
+                shader = Shader.Find("KSP/Bumped Specular (Cutoff)"); // https://github.com/LGhassen/Deferred/blob/ef3c211b5cf447beb15732a47bd5c25669f96a4c/shaders/DeferredKSPShaders/Assets/Shaders/Replaced%20shaders/Part%20shaders/BumpedSpecularCutoffOpaque.shader
                 if (shader == null)
                 {
                     ROLLog.error($"No shader called KSP/Bumped Specular (Cutoff) found for part {base.part.partInfo.name}.");
